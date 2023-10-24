@@ -1,0 +1,16 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base
+  - r-tidyverse
+  - r-stringi
+  - r-data.table
+  - r-dtplyr
+  - r-proxy
+  - r-viridislite
+  - bioconductor-genomicranges
+  - bioconductor-rsamtools
+  - bioconductor-rtracklayer
+  - bioconductor-destiny
+  - r-millefy
