@@ -1,24 +1,13 @@
-# r-conda
+# Millefy-binder
 
-JupyterLab:  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fomightez/rcondatestOct/master)
+JupyterLab:  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fomightez/millefy-binder/master)
 
-RStudio:  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fomightez/rcondatestOct/master?urlpath=rstudio)
+RStudio:  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fomightez/millefy-binder/master?urlpath=rstudio)
 
 
-> R and RStudio in repo2docker without waiting for packages to compile!
+> Millefy tool by Ozaki et al. 2020 packaged so it works in launches via MyBinder.org!
 
-Jupyter+R: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/fomightez/rcondatestOct/master?filepath=index.ipynb)
+Worked out what was needed over at my reporconda test using https://github.com/yuifu/millefy/tree/master#installation and realizing needed to unpin r-base (based on https://github.com/ngs-docs/2020-ggg-201b-rnaseq) and that millefy Anaconda recipe existed when searching with term 'anaconda millefy' came up with some text that listed r-millefy & so then I searched Anaconda's tool bar at https://anaconda.org/bioconda/repo for 'r-millefy' , to get https://anaconda.org/search?q=r-millefy that listed https://anaconda.org/search?q=r-millefy !!!
 
-RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/fomightez/rcondatestOct/master?urlpath=rstudio)
-
-Binder supports using R and RStudio, with libraries pinned to a specific versions.
-
-Install R itself and your required R packages via conda packages. Installing conda packages is faster than
-installing CRAN packages. This is because CRAN packages need compiling during the install process and conda
-packages do not.
-
-For some R packages there is no corresponding conda-forge package yet, in that case take a look at https://github.com/binder-examples/r. Note that these two approaches cannot be combined, so you cannot install R packages via Conda and via an `install.R` file at the same time. You can check if a required R package is available on the Conda Forge website at https://conda-forge.org/feedstock-outputs/ by searching for `r-PACKAGENAME`. You can install R packges from other sources using a `postBuild` script.
-
-Both [RStudio](https://www.rstudio.com/) and [IRKernel](https://irkernel.github.io/)
-are installed by default, so you can use either the Jupyter notebook interface or
-the RStudio interface.
+Millefy source publication:
+GOES HERE
