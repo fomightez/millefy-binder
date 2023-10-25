@@ -14,7 +14,7 @@ RStudio:  [![badge](https://img.shields.io/badge/launch-RStudio-F5A252.svg?logo=
 Millefy is R-based software provides genome browser-like visualization of single-cell RNA sequencing (scRNA-seq) datasets.   
 See more about it in [the associated publication by Ozaki et al. (2020)]((https://pubmed.ncbi.nlm.nih.gov/32122302/) or at [the Millefy Github repo](https://github.com/yuifu/millefy). [The Millefy Github repo](https://github.com/yuifu/millefy) summarizes it succinctly with:
 
->"Millefy is a tool for visualizing read coverage of single-cell RNA sequensing (scRNA-seq) datasets in genomic contexts. By dynamically and automatically reorder single cells based on 'locus-specific' pseudotime, Millefy highlights cell-to-cell heterogeneity in read covreage of scRNA-seq data."
+>"Millefy is a tool for visualizing read coverage of single-cell RNA sequencing (scRNA-seq) datasets in genomic contexts. By dynamically and automatically reorder single cells based on 'locus-specific' pseudotime, Millefy highlights cell-to-cell heterogeneity in read covreage of scRNA-seq data."
 
 I, Wayne, wWorked out what was needed to get it to work in MyBinder where can use in either RStudio or JupyterLab over at my repo [rcondatestOct](https://github.com/fomightez/rcondatestOct) using https://github.com/yuifu/millefy/tree/master#installation as the initial guide.  Beyond getting the dependencies that came up from the installation guide and as I attempted, major rogress in getting it working fully came with two big break throughs: (1)realizing I needed to unpin r-base  because r-millefy needs R 4.1 or greater and knowing https://github.com/ngs-docs/2020-ggg-201b-rnaseq was working with several current libraries was unpinned, due to fact I had helped with getting that repo working on MyBinder recently, and (2) learning that millefy Anaconda recipe existed when searching with term 'anaconda millefy' came up with some text that listed 'r-millefy'. After seeing 'r-millefy listed I then searched Anaconda's tool bar at https://anaconda.org/bioconda/repo for 'r-millefy' , to get https://anaconda.org/search?q=r-millefy that listed https://anaconda.org/bioconda/r-millefy!!!
 
@@ -38,14 +38,14 @@ Step-by-Step:
 To be done (maybe as separate Markdown?)
 
 
-Attributions
-------------
+Attributions & Millefy resources
+---------------------------------
 
 Millefy source publication:  
 Millefy: visualizing cell-to-cell heterogeneity in read coverage of single-cell RNA sequencing datasets. Ozaki H, Hayashi T, Umeda M, Nikaido I. BMC Genomics. 2020 Mar 3;21(1):177. doi: 10.1186/s12864-020-6542-z. [PMID: 32122302](https://pubmed.ncbi.nlm.nih.gov/32122302/)
 
 
-The Jupyter document `test_millefy.ipynb` comes from [datascience-notebook-millefy](https://github.com/yuifu/datascience-notebook-millefy), which is a Docker image for running Millefy on JupyterLab that the deveoper [Haruka Ozaki (yuifu on GitHub)](https://github.com/yuifu) provided. Presumably that could have been used as a foundation to build this repo since MyBinder can take Dockerfiles; however, that is not the recommended way and because this is R-based I preferred to also have it work with RStudio and so going with the recommended configuring approach seemed easier and should be more robust in the long run.
+The Jupyter document `test_millefy.ipynb`, included herein, comes from [datascience-notebook-millefy](https://github.com/yuifu/datascience-notebook-millefy), which is a Docker image for running Millefy on JupyterLab that the deveoper [Haruka Ozaki (yuifu on GitHub)](https://github.com/yuifu) provided. Presumably that could have been used as a foundation to build this repo since MyBinder can take Dockerfiles; however, that is not the recommended way and because this is R-based I preferred to also have it work with RStudio and so going with the recommended configuring approach seemed easier and should be more robust in the long run.
 
 [The Millefy Github repo](https://github.com/yuifu/millefy), that the deveoper [Haruka Ozaki (yuifu on GitHub)](https://github.com/yuifu) provided, has both a [Quick example with an included example dataset](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md) and a [Tutorial for Millefy](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Tutorial.md).  Those form the basis for the guide to using Millefy in RStudio.
 
