@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Get the jupyter notebook `test_millefy.ipynb` from https://github.com/yuifu/datascience-notebook-millefy
-!curl -OL https://raw.githubusercontent.com/yuifu/datascience-notebook-millefy/master/examples/test_millefy.ipynb
+curl -OL https://raw.githubusercontent.com/yuifu/datascience-notebook-millefy/master/examples/test_millefy.ipynb
