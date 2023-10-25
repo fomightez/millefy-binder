@@ -16,7 +16,9 @@ See more about it in [the associated publication by Ozaki et al. (2020)]((https:
 
 >"Millefy is a tool for visualizing read coverage of single-cell RNA sequencing (scRNA-seq) datasets in genomic contexts. By dynamically and automatically reorder single cells based on 'locus-specific' pseudotime, Millefy highlights cell-to-cell heterogeneity in read covreage of scRNA-seq data."
 
-I, Wayne, wWorked out what was needed to get it to work in MyBinder where can use in either RStudio or JupyterLab over at my repo [rcondatestOct](https://github.com/fomightez/rcondatestOct) using https://github.com/yuifu/millefy/tree/master#installation as the initial guide.  Beyond getting the dependencies that came up from the installation guide and as I attempted, major rogress in getting it working fully came with two big break throughs: (1)realizing I needed to unpin r-base  because r-millefy needs R 4.1 or greater and knowing https://github.com/ngs-docs/2020-ggg-201b-rnaseq was working with several current libraries was unpinned, due to fact I had helped with getting that repo working on MyBinder recently, and (2) learning that millefy Anaconda recipe existed when searching with term 'anaconda millefy' came up with some text that listed 'r-millefy'. After seeing 'r-millefy listed I then searched Anaconda's tool bar at https://anaconda.org/bioconda/repo for 'r-millefy' , to get https://anaconda.org/search?q=r-millefy that listed https://anaconda.org/bioconda/r-millefy!!!
+With sessions launched from here, you can choose to either work with Millefy in JupyterLab or RStudio.  
+The following two sections describe the basics of each in order to get you started.  
+
 
 Using Millefy in RStudio via MyBinder-served sessions
 -----------------------------------------------------
@@ -35,7 +37,11 @@ JupyterLab:  [![badge](https://img.shields.io/badge/launch-JupyterLab-579ACA.svg
 
 Step-by-Step:
 
-To be done (maybe as separate Markdown?)
+1. Click the above badge or [click here](https://mybinder.org/v2/gh/fomightez/millefy-binder/master?labpath=test_millefy.ipynb) to launch a Jupyter session where the `test_millefy.ipynb` from [datascience-notebook-millefy](https://github.com/yuifu/datascience-notebook-millefy) will open by default. 
+
+1. Run the cells in the 'Example usage of Millefy' noteebook by using 'Run' > 'Run All Cells' from the main File menu ribbon across the top. Alternatively, click on eacch cell and hit Shift-Enter to run one at a time.
+
+1. Once you understand the basics, you can adapt the code to run and analyze your own data. Remember to save anything useful you make back to your local computer as the session is anonymous and ephemeral. In general, **once the session expoers or times out, your work is gone**. There is a possible avenue for help when working in JupyterLab and your session times out with the browser window still open, see 'Getting your notebook after your Binder has stopped'. As it is rather involved, it is best you try it ahead of actually needing it.
 
 
 Attributions & Millefy resources
