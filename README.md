@@ -27,7 +27,51 @@ RStudio:  [![badge](https://img.shields.io/badge/launch-Millefy%20in%20RStudio-F
 
 Step-by-Step:
 
-To be done (maybe as separate Markdown?)
+- Click the above badge or [click here](https://mybinder.org/v2/gh/fomightez/millefy-binder/master?urlpath=rstudio) to launch a session with RStudio where millefy is already installed. 
+
+- In the pane on the left side of RStudio, after the caret prompt, enter `library(millefy)` to load the library into the current namespace.
+
+- Now to work through the [Quick example with an included example dataset](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md) paste in the code below from under the heading'Prepare tracks and parameters':
+
+```R
+# Path to bigWig files
+bwfiles = Sys.glob(file.path(system.file("extdata", package="millefy"), "*.bw"))
+
+# Group labels for bigWig files (same length as \\code{bwfiles})
+groups = c("00h", "00h", "00h", "12h", "12h", "12h")
+
+# Color labels for bigWig files (A named vector with the same length as the number of kinds of \\code{groups})
+color_labels <- colorRampPalette(c("yellow", "red"))(length(unique(groups))+1)[1:length(unique(groups))]
+names(color_labels)  <- unique(groups)
+
+# Parameters
+max_value = 7873
+
+# Single cell track
+scTrackBw <- list(path_bam_files = bwfiles, groups = groups, group_colors = color_labels, max_value = max_value, isBw=TRUE)
+
+# Gene annotation track (For faster performance, try to use \\code{dt_gtf} paramter)
+path_gtf = system.file("extdata", "example.gtf", package="millefy")
+dt_gtf_exon <- gtfToDtExon(path_gtf)
+geneTrack1 <- list(path_gtf = path_gtf, dt_gtf = dt_gtf_exon, label = "GENCODE")
+
+# Prepare arguments for \\code{millefyPlot()}
+tdlist <- list(scTrackBw, geneTrack1)
+tt <- c("sc", "gene")
+heights = c(12, 2)
+text_main = "My plot"
+
+# Location to visualize
+chr =  "chr19" # character
+start = 5824708 # integer
+end = 5845478 # integer
+```
+
+That only sets things up.
+
+- With the data and settings specified, you are ready to plot. However, at present you may note seeing the warning: "`Warning message:
+R graphics engine version 16 is not supported by this version of RStudio. The Plots tab will be disabled until a newer version of RStudio is installed.`". And so instead of simply following the ['Plot; section of the Quick example](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md#plot), it will need adapting.
+
 
 Using Millefy in JupyterLab via MyBinder-served sessions
 -----------------------------------------------------
@@ -41,7 +85,9 @@ Step-by-Step:
 
 1. Run the cells in the 'Example usage of Millefy' noteebook by using 'Run' > 'Run All Cells' from the main File menu ribbon across the top. Alternatively, click on eacch cell and hit Shift-Enter to run one at a time.
 
-1. Once you understand the basics, you can adapt the code to run and analyze your own data. Remember to press the disk icon often to save the current notebook in the session and then save anything useful you make back to your local computer as the session is anonymous and ephemeral. ('`File`' > '`Download`'.) In general, **once the session expires or connection times out, your work is gone**. There is a possible avenue for help when working in JupyterLab and your MyBinder-served session times out with the browser window still open, see 'Getting your notebook after your Binder has stopped'. As the process is rather involved and not something anyone would be familiar with from using '*Vanilla*' Jupyter, it is best you try steps ahead of actually needing it.
+1. Once you understand the basics, you can adapt the code to run and analyze your own data.   
+You can exit single-document mode with the toggle in the bottom left corner and then click the 'Folder' icon on the tool strip on the left side of the main panel to open the file browser pane in JupyterLab.   
+Remember to press the disk icon often to save the current notebook in the session and then save anything useful you make back to your local computer as the session is anonymous and ephemeral. ('`File`' > '`Download`'.) In general, **once the session expires or connection times out, your work is gone**. There is a possible avenue of help when working in JupyterLab and your MyBinder-served session times out with the browser window still open, see 'Getting your notebook after your Binder has stopped'. As the process is rather involved and not something anyone would be familiar with from using '*Vanilla*' Jupyter, it is best you try steps ahead of actually needing it.
 
 
 Attributions & Millefy resources
@@ -50,10 +96,10 @@ Attributions & Millefy resources
 Millefy source publication:  
 Millefy: visualizing cell-to-cell heterogeneity in read coverage of single-cell RNA sequencing datasets. Ozaki H, Hayashi T, Umeda M, Nikaido I. BMC Genomics. 2020 Mar 3;21(1):177. doi: 10.1186/s12864-020-6542-z. [PMID: 32122302](https://pubmed.ncbi.nlm.nih.gov/32122302/)
 
+[The Millefy Github repo](https://github.com/yuifu/millefy), that the deveoper [Haruka Ozaki (yuifu on GitHub)](https://github.com/yuifu) provided, has both a [Quick example with an included example dataset](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md) and a [Tutorial for Millefy](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Tutorial.md).  Those form the basis for the guide to using Millefy in RStudio.
 
 The Jupyter document `test_millefy.ipynb`, included in launched sessions, comes from [datascience-notebook-millefy](https://github.com/yuifu/datascience-notebook-millefy), which is a Docker image for running Millefy on JupyterLab that the deveoper [Haruka Ozaki (yuifu on GitHub)](https://github.com/yuifu) provided. Presumably that could have been used as a foundation to build this repo since MyBinder can take Dockerfiles; however, that is not the recommended way and because this is R-based I preferred to also have it work with RStudio and so going with the recommended configuring approach seemed easier and should be more robust in the long run.
 
-[The Millefy Github repo](https://github.com/yuifu/millefy), that the deveoper [Haruka Ozaki (yuifu on GitHub)](https://github.com/yuifu) provided, has both a [Quick example with an included example dataset](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md) and a [Tutorial for Millefy](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Tutorial.md).  Those form the basis for the guide to using Millefy in RStudio.
 
 Anaconda's page for the bioconda package for installing Millefy in the Anaconda/conda software management system is [here](https://anaconda.org/bioconda/r-millefy).
 
