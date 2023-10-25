@@ -27,50 +27,7 @@ RStudio:  [![badge](https://img.shields.io/badge/launch-Millefy%20in%20RStudio-F
 
 Step-by-Step:
 
-- Click the above badge or [click here](https://mybinder.org/v2/gh/fomightez/millefy-binder/master?urlpath=rstudio) to launch a session with RStudio where millefy is already installed. 
-
-- In the pane on the left side of RStudio, after the caret prompt, enter `library(millefy)` to load the library into the current namespace.
-
-- Now to work through the [Quick example with an included example dataset](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md) paste in the code below from under the heading'Prepare tracks and parameters':
-
-```R
-# Path to bigWig files
-bwfiles = Sys.glob(file.path(system.file("extdata", package="millefy"), "*.bw"))
-
-# Group labels for bigWig files (same length as \\code{bwfiles})
-groups = c("00h", "00h", "00h", "12h", "12h", "12h")
-
-# Color labels for bigWig files (A named vector with the same length as the number of kinds of \\code{groups})
-color_labels <- colorRampPalette(c("yellow", "red"))(length(unique(groups))+1)[1:length(unique(groups))]
-names(color_labels)  <- unique(groups)
-
-# Parameters
-max_value = 7873
-
-# Single cell track
-scTrackBw <- list(path_bam_files = bwfiles, groups = groups, group_colors = color_labels, max_value = max_value, isBw=TRUE)
-
-# Gene annotation track (For faster performance, try to use \\code{dt_gtf} paramter)
-path_gtf = system.file("extdata", "example.gtf", package="millefy")
-dt_gtf_exon <- gtfToDtExon(path_gtf)
-geneTrack1 <- list(path_gtf = path_gtf, dt_gtf = dt_gtf_exon, label = "GENCODE")
-
-# Prepare arguments for \\code{millefyPlot()}
-tdlist <- list(scTrackBw, geneTrack1)
-tt <- c("sc", "gene")
-heights = c(12, 2)
-text_main = "My plot"
-
-# Location to visualize
-chr =  "chr19" # character
-start = 5824708 # integer
-end = 5845478 # integer
-```
-
-That only sets things up.
-
-- With the data and settings specified, you are ready to plot. However, at present you may note seeing the warning: "`Warning message:
-R graphics engine version 16 is not supported by this version of RStudio. The Plots tab will be disabled until a newer version of RStudio is installed.`". And so instead of simply following the ['Plot; section of the Quick example](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md#plot), it will need adapting.
+To keep this landing page relatively short, the step-by-step directions for using Millefy in RStudio are [here in a separate document](rstudio_use.md).
 
 
 Using Millefy in JupyterLab via MyBinder-served sessions
