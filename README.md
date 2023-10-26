@@ -38,9 +38,9 @@ JupyterLab:  [![badge](https://img.shields.io/badge/launch-Millefy%20in%20Jupyte
 
 Step-by-Step:
 
-1. Click the above badge or [click here](https://mybinder.org/v2/gh/fomightez/millefy-binder/master?labpath=test_millefy.ipynb) to launch a Jupyter session where the `test_millefy.ipynb` from [datascience-notebook-millefy](https://github.com/yuifu/datascience-notebook-millefy) will open by default. 
+1. Click the above badge or [click here](https://mybinder.org/v2/gh/fomightez/millefy-binder/master?labpath=test_millefy.ipynb) to launch a Jupyter session where the [test_millefy.ipynb](https://nbviewer.org/github/yuifu/datascience-notebook-millefy/blob/90f30181e77657566bc2b87c0f70fa5118c4c9fb/examples/test_millefy.ipynb), from [datascience-notebook-millefy](https://github.com/yuifu/datascience-notebook-millefy) will open by default with the R kernel attached upon startup of the session. 
 
-1. Run the cells in the 'Example usage of Millefy' noteebook by using 'Run' > 'Run All Cells' from the main File menu ribbon across the top. Alternatively, click on eacch cell and hit Shift-Enter to run one at a time.
+1. Run the cells in the 'Example usage of Millefy' noteebook by using 'Run' > 'Run All Cells' from the main File menu ribbon across the top. Alternatively, click on each cell and hit Shift-Enter to run one at a time.
 
 1. Once you understand the basics, you can adapt the code to run and analyze your own data.   
 You can exit single-document mode with the toggle in the bottom left corner and then click the 'Folder' icon on the tool strip on the left side of the main panel to open the file browser pane in JupyterLab.   
@@ -55,7 +55,7 @@ Millefy: visualizing cell-to-cell heterogeneity in read coverage of single-cell 
 
 [The Millefy Github repo](https://github.com/yuifu/millefy), that the deveoper [Haruka Ozaki (yuifu on GitHub)](https://github.com/yuifu) provided, has both a [Quick example with an included example dataset](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md) and a [Tutorial for Millefy](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Tutorial.md).  Those form the basis for the guide to using Millefy in RStudio.
 
-The Jupyter document `test_millefy.ipynb`, included in launched sessions, comes from [datascience-notebook-millefy](https://github.com/yuifu/datascience-notebook-millefy), which is a Docker image for running Millefy on JupyterLab that the deveoper [Haruka Ozaki (yuifu on GitHub)](https://github.com/yuifu) provided. Presumably that could have been used as a foundation to build this repo since MyBinder can take Dockerfiles; however, that is not the recommended way and because this is R-based I preferred to also have it work with RStudio and so going with the recommended configuring approach seemed easier and should be more robust in the long run.
+The R kernel-based Jupyter document [test_millefy.ipynb](https://nbviewer.org/github/yuifu/datascience-notebook-millefy/blob/90f30181e77657566bc2b87c0f70fa5118c4c9fb/examples/test_millefy.ipynb), included in launched sessions, comes from [datascience-notebook-millefy](https://github.com/yuifu/datascience-notebook-millefy), which is a Docker image for running Millefy on JupyterLab that the deveoper [Haruka Ozaki (yuifu on GitHub)](https://github.com/yuifu) provided. Presumably that could have been used as a foundation to build this repo since MyBinder can take Dockerfiles; however, that is not the recommended way and because this is R-based I preferred to also have it work with RStudio and so going with the recommended configuring approach seemed easier and should be more robust in the long run.
 
 
 Anaconda's page for the bioconda package for installing Millefy in the Anaconda/conda software management system is [here](https://anaconda.org/bioconda/r-millefy).
