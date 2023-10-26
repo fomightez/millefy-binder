@@ -47,8 +47,36 @@ end = 5845478 # integer
 
 That only sets things up.
 
-- With the data and settings specified, you are ready to plot. However, at present you may note seeing the warning: "`Warning message:
-R graphics engine version 16 is not supported by this version of RStudio. The Plots tab will be disabled until a newer version of RStudio is installed.`". And so instead of simply following the ['Plot; section of the Quick example](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md#plot), it will need adapting using what is covered [under 'Saving Millefy plots' in the full Tutorial for Millefy](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Tutorial.md#3-saving-millefy-plots). Specifically, by putting `millefyPlot()` between `pdf()` and `dev.off()`, you can save the plot to a PDF file. Because clicking on the produced PDF in the RStudio file browser will open right in the browser, it shouldn't actually disrupt workflow too much.
-
 - You may also wish to check out the R kernel-based Jupyter document [test_millefy.ipynb](https://nbviewer.org/github/yuifu/datascience-notebook-millefy/blob/90f30181e77657566bc2b87c0f70fa5118c4c9fb/examples/test_millefy.ipynb), as I find is a little more detailed than the `Quick_example.md` content, and annotates steps like loading the gene models slightly differently in a way that those learning about Millefy use may appreciate.
+
+- With the data and settings specified, you are ready to plot. However, you may note earlier seeing the warning: "`Warning message:
+R graphics engine version 16 is not supported by this version of RStudio. The Plots tab will be disabled until a newer version of RStudio is installed.`". At present, with the RStudio version utilized by the MyBinder system the usual trigger for plots to open in RStudio's 'Plots' pane automatically will not work, and so instead of simply following the ['Plot; section of the Quick example](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md#plot), it will need adapting using what is covered [under 'Saving Millefy plots' in the full Tutorial for Millefy](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Tutorial.md#3-saving-millefy-plots). Specifically, by putting `millefyPlot()` between `pdf()` and `dev.off()`, you can save the plot to a PDF file. Because clicking on the produced PDF file in the RStudio file browser will open right in the browser, it shouldn't actually disrupt workflow too much. Here is that code adapted:
+
+```R
+pdf("first_plot_out.pdf")
+l <- millefyPlot(track_data=tdlist, track_type=tt, heights=heights,
+          sc_type = "heatmap",
+          chr = chr, start = start, end = end,
+          sc_avg = TRUE, sc_avg_height = 1,
+          title = text_main)
+dev.off()
+```
+
+- Paste that code into the left side of RStudio's panels at the caret prompt and hit return. That will produce the file `first_plot_out.pdf`. Double-click on that file listed in the bottom right pane in RStudio, the file navigation pane, and it should open the PDF in your browser. Note that the Quick example says:
+
+>"When we don't set the sc_sort_destiny parameter (default), the order of single cells is the order of `bwfiles`."
+
+- Next the Quick_example covers, "When we set sc_sort_destiny = 'all', all single cells are reordered by diffusion maps." That code adapted how it was just above would be:
+
+```R
+pdf("second_plot_out.pdf")
+l <- millefyPlot(track_data=tdlist, track_type=tt, heights=heights,
+          sc_type = "heatmap",
+          chr = chr, start = start, end = end,
+          sc_avg = TRUE, sc_avg_height = 1,
+          title = text_main)
+dev.off()
+```
+
+- Paste that code into the left side of RStudio's panels at the caret prompt and hit return. That will produce the file `second_plot_out.pdf`. Double-click on that file listed in the bottom right pane in RStudio, the file navigation pane, and it should open the PDF in your browser
 
