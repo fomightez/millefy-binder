@@ -12,7 +12,7 @@ RStudio:  [![badge](https://img.shields.io/badge/launch-Millefy%20in%20RStudio-F
 > Millefy tool by Ozaki et al. 2020 packaged so it works in launches via MyBinder.org!
 
 Millefy is R-based software provides genome browser-like visualization of single-cell RNA sequencing (scRNA-seq) datasets.   
-See more about it in [the associated publication by Ozaki et al. (2020)]((https://pubmed.ncbi.nlm.nih.gov/32122302/) or at [the Millefy Github repo](https://github.com/yuifu/millefy). [The Millefy Github repo](https://github.com/yuifu/millefy) summarizes it succinctly with:
+See more about it in [the associated publication by Ozaki et al. (2020)](https://pubmed.ncbi.nlm.nih.gov/32122302/) or at [the Millefy Github repo](https://github.com/yuifu/millefy). [The Millefy Github repo](https://github.com/yuifu/millefy) summarizes it succinctly with:
 
 >"Millefy is a tool for visualizing read coverage of single-cell RNA sequencing (scRNA-seq) datasets in genomic contexts. By dynamically and automatically reorder single cells based on 'locus-specific' pseudotime, Millefy highlights cell-to-cell heterogeneity in read covreage of scRNA-seq data."
 
