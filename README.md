@@ -30,7 +30,7 @@ RStudio:  [![badge](https://img.shields.io/badge/launch-Millefy%20in%20RStudio-F
 
 Step-by-Step:
 
-To keep this landing page a reasonable length, [the step-by-step directions for using Millefy in RStudio provided via MyBinder.org are here](rstudio_use.md).
+To keep this landing page a reasonable length, [the step-by-step directions for using Millefy in RStudio provided via MyBinder.org are here in an associated wiki](https://github.com/fomightez/millefy-binder/wiki/Using-Millefy-in-RStudio-via-MyBinder%E2%80%90served-sessions#using-millefy-in-rstudio-via-mybinder-served-sessions.
 
 
 Using Millefy in JupyterLab via MyBinder-served sessions

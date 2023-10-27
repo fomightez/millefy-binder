@@ -9,7 +9,7 @@ Step-by-Step:
 
 - In the pane on the left side of RStudio, after the caret prompt, enter `library(millefy)` to load the library into the current namespace.
 
-- Now to work through the [Quick example with an included example dataset](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md) paste in the code below from under the heading'Prepare tracks and parameters':
+- Now to get started working through the [Quick example with an included example dataset](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md) paste in the code below from under the heading 'Prepare tracks and parameters':
 
 ```R
 # Path to bigWig files
@@ -50,7 +50,7 @@ That only sets things up.
 - You may also wish to check out the R kernel-based Jupyter document [test_millefy.ipynb](https://nbviewer.org/github/yuifu/datascience-notebook-millefy/blob/90f30181e77657566bc2b87c0f70fa5118c4c9fb/examples/test_millefy.ipynb), as I find is a little more detailed than the `Quick_example.md` content, and annotates steps like loading the gene models slightly differently in a way that those learning about Millefy use may appreciate.
 
 - With the data and settings specified, you are ready to plot. However, you may note earlier seeing the warning: "`Warning message:
-R graphics engine version 16 is not supported by this version of RStudio. The Plots tab will be disabled until a newer version of RStudio is installed.`". At present, with the RStudio version utilized by the MyBinder system the usual trigger for plots to open in RStudio's 'Plots' pane automatically will not work, and so instead of simply following the ['Plot; section of the Quick example](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md#plot), it will need adapting using what is covered [under 'Saving Millefy plots' in the full Tutorial for Millefy](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Tutorial.md#3-saving-millefy-plots). Specifically, by putting `millefyPlot()` between `pdf()` and `dev.off()`, you can save the plot to a PDF file. Because clicking on the produced PDF file in the RStudio file browser will open right in the browser, it shouldn't actually disrupt workflow too much. Here is that code adapted:
+R graphics engine version 16 is not supported by this version of RStudio. The Plots tab will be disabled until a newer version of RStudio is installed.`". At present, with the RStudio version utilized by the MyBinder system the usual trigger for plots to open in RStudio's 'Plots' pane automatically will not work, and so instead of simply following the ['Plot' section of the Quick example](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Quick_example.md#plot), it will need adapting using what is covered [under 'Saving Millefy plots' in the full Tutorial for Millefy](https://github.com/yuifu/millefy/blob/0f2dde5a4ae8fa321f626410bc62db0255090f91/tutorial/Tutorial.md#3-saving-millefy-plots). Specifically, by putting `millefyPlot()` between `pdf()` and `dev.off()`, you can save the plot to a PDF file. Because clicking on the produced PDF file in the RStudio file browser will open right in the browser, it shouldn't actually disrupt workflow too much. Here is that code adapted:
 
 ```R
 pdf("first_plot_out.pdf")
