@@ -14,7 +14,9 @@ RStudio:  [![badge](https://img.shields.io/badge/launch-Millefy%20in%20RStudio-F
 Millefy is R-based software provides genome browser-like visualization of single-cell RNA sequencing (scRNA-seq) datasets.   
 See more about it in [the associated publication by Ozaki et al. (2020)](https://pubmed.ncbi.nlm.nih.gov/32122302/) or at [the Millefy Github repo](https://github.com/yuifu/millefy). [The Millefy Github repo](https://github.com/yuifu/millefy) summarizes it succinctly with:
 
->"Millefy is a tool for visualizing read coverage of single-cell RNA sequencing (scRNA-seq) datasets in genomic contexts. By dynamically and automatically reorder single cells based on 'locus-specific' pseudotime, Millefy highlights cell-to-cell heterogeneity in read covreage of scRNA-seq data."
+>"Millefy is a tool for visualizing read coverage of single-cell RNA sequencing (scRNA-seq) datasets in genomic contexts. By dynamically and automatically reorder [*sic*] single cells based on 'locus-specific' pseudotime, Millefy highlights cell-to-cell heterogeneity in read covreage [*sic*] of scRNA-seq data."
+
+[Figure 1 of Ozaki et al. 2020](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6542-z/figures/1) provides an excellent overview of the input data, processing, and typical results.
 
 With sessions launched from here, you can choose to either work with Millefy in JupyterLab or RStudio.  
 The following two sections describe the basics of each in order to get you started.  
