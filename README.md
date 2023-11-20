@@ -65,4 +65,4 @@ The R kernel-based Jupyter document [test_millefy.ipynb](https://nbviewer.org/gi
 
 Anaconda's page for the bioconda package for installing Millefy in the Anaconda/conda software management system is [here](https://anaconda.org/bioconda/r-millefy).
 
-***Clarifying Software Attribution: I, Wayne, am not involved in the Millefy software at all. Those attributed above are the developers and distributors of Millefy. See their materials, which are highlighted above in this section. I simply set up this repository to make the software useable with RStudio and JupyterLab in a browser without installation headaches.***
+***Clarifying Software Attribution: I, Wayne, am not involved in the Millefy software at all. Those attributed above are the developers and distributors of Millefy. See their materials, which are highlighted above in this section. I simply set up this repository to make the software useable with RStudio and JupyterLab in a browser without installation headaches, and I expanded on the developer-provided guides some.***
