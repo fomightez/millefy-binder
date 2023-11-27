@@ -43,7 +43,7 @@ Step-by-Step:
 
 1. Click the above badge or [click here](https://mybinder.org/v2/gh/fomightez/millefy-binder/master?labpath=test_millefy.ipynb) to launch a Jupyter session where the [test_millefy.ipynb](https://nbviewer.org/github/yuifu/datascience-notebook-millefy/blob/90f30181e77657566bc2b87c0f70fa5118c4c9fb/examples/test_millefy.ipynb), from [datascience-notebook-millefy](https://github.com/yuifu/datascience-notebook-millefy) will open by default with the R kernel attached upon startup of the session. 
 
-1. Run the cells in the 'Example usage of Millefy' noteebook by using 'Run' > 'Run All Cells' from the main File menu ribbon across the top. Alternatively, click on each cell and hit Shift-Enter to run one at a time.
+1. Run the cells in the 'Example usage of Millefy' notebook by using 'Run' > 'Run All Cells' from the main File menu ribbon across the top. Alternatively, click on each cell and hit Shift-Enter to run one at a time. There is a link at the bottom of that notebook to much of the same content using BAM files as the starting input if that interests you.
 
 1. Once you understand the basics, you can adapt the code to run and analyze your own data.   
 You can exit single-document mode with the toggle in the bottom left corner and then click the 'Folder' icon on the tool strip on the left side of the main panel to open the file browser pane in JupyterLab.   
