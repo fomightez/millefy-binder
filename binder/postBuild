@@ -31,3 +31,7 @@ python add_additional_cell.py
 
 # Clean up by removing script since it is no longer needed.
 rm add_additional_cell.py
+
+# Replace original notebook file
+rm test_millefy.ipynb
+mv TEMPtest_millefyPLUS_POINTER_TEXT_IN_CELL.ipynb test_millefy.ipynb
