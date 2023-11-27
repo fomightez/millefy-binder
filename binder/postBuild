@@ -3,8 +3,8 @@
 # Get the jupyter notebook `test_millefy.ipynb` from https://github.com/yuifu/datascience-notebook-millefy
 curl -OL https://raw.githubusercontent.com/yuifu/datascience-notebook-millefy/master/examples/test_millefy.ipynb
 
-# Add pointer to the notebook that demonstrates handling BAM files
-#----------------------------------------------------------------#
+# Add pointer to the developer provided tutorial notebook that demonstrates handling BAM files
+#--------------------------------------------------------------------------------------------#
 # Save Python code as script to run - using Python because nbformat makes this easy; building the script into the `postBuild` file means I have less to track
 cat > add_additional_cell.py <<EOF 
 import nbformat as nbf
